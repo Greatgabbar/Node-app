@@ -25,6 +25,10 @@ app.get("/minus", (req, res) => {
   res.send("Solution is " + solution);
 });
 
+app.get("/ping", (req, res) => {
+  res.send("pong");
+});
+
 app.get("*", function (_req, res) {
   res.redirect("/plus?x=5&y=2");
 });
